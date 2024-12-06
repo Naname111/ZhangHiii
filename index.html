@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=0, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>22229595 ZHANG CHEN</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/mobile.css">
+	<script type='text/javascript' src='js/mobile.js'></script>
+	<script type="text/javascript">
+		// Function to start a small basketball trivia quiz
+		function startTriviaQuiz() {
+			const questions = [
+				{
+					question: "Who is known as 'His Airness' in basketball?",
+					options: ["LeBron James", "Kobe Bryant", "Michael Jordan", "Shaquille O'Neal"],
+					answer: "Michael Jordan"
+				},
+				{
+					question: "How many players are on the court for each team in a basketball game?",
+					options: ["4", "5", "6", "7"],
+					answer: "5"
+				},
+				{
+					question: "What is the regulation height of a basketball hoop?",
+					options: ["8 feet", "9 feet", "10 feet", "11 feet"],
+					answer: "10 feet"
+				}
+			];
+
+			// Randomly select a question
+			const randomIndex = Math.floor(Math.random() * questions.length);
+			const selectedQuestion = questions[randomIndex];
+
+			// Prompt user with the question and get their answer
+			let userAnswer = prompt(
+				`${selectedQuestion.question}\n\nOptions:\n${selectedQuestion.options.join("\n")}`
+			);
+
+			// Check if the answer is correct
+			if (userAnswer && userAnswer.toLowerCase() === selectedQuestion.answer.toLowerCase()) {
+				alert("Correct! You're a basketball pro!");
+			} else {
+				alert(`Oops! The correct answer is: ${selectedQuestion.answer}. Keep learning!`);
+			}
+		}
+
+		// Function to display a welcoming message only on the top (index) page
+		window.onload = function() {
+			if (window.location.pathname.includes('index.html') || window.location.pathname === '/') {
+				alert("Hi  Fatih....Welcome to the Basketball Training Hub! We are thrilled to have you here!");
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="header">
+		<h1><a href="index.html">Welcome <span>Become a basketball champion</span></a></h1>
+		<ul id="navigation">
+			<li class="current">
+				<a href="index.html">Home</a>
+			</li>
+			<li>
+				<a href="about.html">About</a>
+			</li>
+			<li>
+				<a href="classes.html">Classes</a>
+				<ul>
+					<li>
+						<a href="instructors.html">Instructors</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="contact.html">Contact</a>
+			</li>
+			<li>
+				<a href="blog.html">Michael Jordan</a>
+			</li>
+		</ul>
+	</div>
+	<div id="body">
+		<div id="tagline">
+			<h1 id="tagline-text">You are welcome</h1>
+			<p>I added a Hi, fatih page using js.I edited the css file that I changed the images and the style, and I added the JS function that makes an interesting game inside.</p>
+			<p>I changed the photos and text content on all pages and changed the link at the bottom.</p>
+			<!-- Add a button to trigger the new function -->
+			<button onclick="startTriviaQuiz()" style="margin-top: 50px; padding: 20px; font-size: 22px;">Start Basketball Trivia Quiz</button>
+		</div>
+		<img src="images/nbaball.jpg" alt="lady doing yoga" class="figure">
+	</div>
+	<div id="footer">
+		<div>
+			<span>ZHANG CHEN 22229595</span>
+			<p>
+				&copy; 2024 CHEN Basketball TRAINING.
+			</p>
+		</div>
+		<div id="connect">
+			<a href="https://www.facebook.com/share/r/19MQJUg4PX/?mibextid=WC7FNe" id="facebook" target="_blank">Facebook</a>
+			<a href="https://x.com/nba?s=21" id="twitter" target="_blank">Twitter</a>
+			<a href="https://journals.humankinetics.com/view/journals/ijspp/5/1/article-p75.xml" id="googleplus" target="_blank">Google&#43;</a>
+			<a href="https://www.pinterest.com/search/pins/?q=%E7%AF%AE%E7%90%83&rs=typed" id="pinterest" target="_blank">Pinterest</a>
+		</div>
+	</div>
+</body>
+</html>
